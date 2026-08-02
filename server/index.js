@@ -47,7 +47,7 @@ async function build() {
 }
 
 build().then((app) => {
-  app.listen({ port: PORT }, () => {
+  app.listen({ port: PORT, host: '0.0.0.0' }, () => {
     console.log(`Server running on http://localhost:${PORT} (${isProd ? 'production' : 'development'})`);
   });
 });
